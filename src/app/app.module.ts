@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
 import { EnregistrementComponent } from './enregistrement/enregistrement.component';
+import { UserComponent } from './user/user.component';
+
+import {UserService} from './user/user.service';
 
 const appRouter: Routes =[
   { path: '', component: LoginFormComponent},
@@ -21,7 +24,9 @@ const appRouter: Routes =[
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'help', component: HelpComponent},
-  {path: 'enregistrement', component: EnregistrementComponent}
+  {path: 'enregistrement', component: EnregistrementComponent},
+  {path: 'user', component: UserComponent}
+
 ]
 
 @NgModule({
@@ -34,7 +39,8 @@ const appRouter: Routes =[
     HomeComponent,
     AboutComponent,
     HelpComponent,
-    EnregistrementComponent
+    EnregistrementComponent,
+    UserComponent
   ],
   imports: [
     RouterModule.forRoot(appRouter),
@@ -42,7 +48,8 @@ const appRouter: Routes =[
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
