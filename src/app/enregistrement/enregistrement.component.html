@@ -1,0 +1,49 @@
+<div class="ui middle aligned center aligned grid forme">
+	<form class="ui large form" (submit)="registerUser()">
+		<div class="ui  segment  formulaire">
+			<div class="ui header">Register</div>
+			<div class="ui stacked  secondary segment">
+				<div class="required field">
+					<div class="ui left icon input">
+						<i class="user icon"></i>
+						<input type="username" name="username" id="username" placeholder="username"/>
+					</div>
+				</div>
+				<div class="required field">
+					<div class="ui left icon input">
+						<i class="user icon"></i>
+						<input type="email" name="email" id="email" placeholder="email"/>
+					</div>
+				</div>
+				<div class="required field">
+					<div class="ui left icon input">
+		            	<i class="lock icon"></i>
+		            	<input type="password" name="password" placeholder="Password">
+		          	</div>
+		        </div>
+		        <div class="required field">
+					<div class="ui left icon input">
+		            	<i class="lock icon"></i>
+		            	<input type="password" name="confirm-password" placeholder="confirm password">
+		          	</div>
+		        </div>
+		        <div class="field">
+				 		<div class="ui selection dropdown">
+				    		<div class="default text" (click)="gender()">Gender</div>
+				    		<i class="dropdown icon"></i>
+				    		<input type="hidden" name="gender">
+				      <div class="menu">
+				        <div class="item" data-value="male">Male</div>
+				        <div class="item" data-value="female">Female</div>
+				      </div>
+				    </div>
+				 </div>
+				<input  class="ui fluid large teal submit button" type="submit" name="" value="Register" />
+			</div>
+		</div>
+		<div class="ui error message"></div>
+		<div class="ui stacked segment">
+			<a class="ui fluid large teal submit button" routerLink="/login" routerLinkActive="active">Log In</a>
+		</div>
+	</form>
+</div>
