@@ -1,0 +1,14 @@
+.container-style{
+	margin-top: 25px;
+	font-family: Arial;
+}
+
+div a {
+	font-size: 15px;
+}
+
+app-footer{
+	position:absolute;
+	bottom:0px;
+	left: 0; right: 0
+}
