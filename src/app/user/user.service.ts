@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
-import {findIndex} from 'lodash';
+//import {findIndex} from 'lodash';
 
 @Injectable()
 export class UserService {
@@ -20,10 +20,10 @@ export class UserService {
   }
 
   updateUser(user: User){
-    let index = findIndex(this.use,(u: User) =>{
-      return u.id === user.id;
-    })
-    this.use[index]=user;
+   // let index = findIndex(this.use,(u: User) =>{
+   //   return u.id === user.id;
+    //})
+   // this.use[index]=user;
   }
 
   deleteUser(user: User){

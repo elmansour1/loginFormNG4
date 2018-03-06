@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
-declare var $: any;
+declare var jQuery: any;
 
 @Component({
   selector: 'app-enregistrement',
@@ -9,14 +10,18 @@ declare var $: any;
 })
 export class EnregistrementComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    jQuery('.ui.dropdown')
+      .dropdown();
   }
 
-  gender(): void{
-     $('select.dropdown')
-    .dropdown();
-  }
+registerUser(){
+  
+  this.router.navigate(['login']);
+
+}
+
 
 }

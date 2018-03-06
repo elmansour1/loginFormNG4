@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from './user.service';
 import {User} from './user';
-import {clone} from 'lodash';
+//import {clone} from 'lodash';
 
 @Component({
   selector: 'app-user',
@@ -34,7 +34,7 @@ export class UserComponent implements OnInit {
     }
 
     this.edituserForm = true;
-    this.editUser = clone(user);
+    //this.editUser = clone(user);
   }
 
   showAddUserForm(){

@@ -16,6 +16,7 @@ import { EnregistrementComponent } from './enregistrement/enregistrement.compone
 import { UserComponent } from './user/user.component';
 
 import {UserService} from './user/user.service';
+import { ViewComponent } from './view/view.component';
 
 const appRouter: Routes =[
   { path: '', component: LoginFormComponent},
@@ -40,7 +41,8 @@ const appRouter: Routes =[
     AboutComponent,
     HelpComponent,
     EnregistrementComponent,
-    UserComponent
+    UserComponent,
+    ViewComponent
   ],
   imports: [
     RouterModule.forRoot(appRouter),

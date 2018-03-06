@@ -7,13 +7,13 @@
 				<div class="required field">
 					<div class="ui left icon input">
 						<i class="envelope icon"></i>
-						<input type="email" name="email" id="email" placeholder="email"/>
+						<input type="email" name="email" [(ngModel)] = "user.email" placeholder="email"/>
 					</div>
 				</div>
 				<div class="required field">
 					<div class="ui left icon input">
 		            	<i class="lock icon"></i>
-		            	<input type="password" name="password" placeholder="Password">
+		            	<input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" placeholder="Password"/>
 		          	</div>
 		        </div>
 				<input  class="ui fluid large teal submit button" type="submit" name="" value="Login" />
@@ -26,41 +26,3 @@
 		</div>
 	</form>
 </div>
-
-<!-- <script type="text/javascript">
-		$(document).ready(function() {
-      $('.ui.form')
-        .form({
-          fields: {
-            email: {
-              identifier  : 'email',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your e-mail'
-                },
-                {
-                  type   : 'email',
-                  prompt : 'Please enter a valid e-mail'
-                }
-              ]
-            },
-            password: {
-              identifier  : 'password',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your password'
-                },
-                {
-                  type   : 'length[6]',
-                  prompt : 'Your password must be at least 6 characters'
-                }
-              ]
-            }
-          }
-        })
-      ;
-    })
-  ;
-	</script> -->
